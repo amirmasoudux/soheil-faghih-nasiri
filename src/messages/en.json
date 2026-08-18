@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Soheil Faghih Nasiri — Guitarist & Composer",
+    "description": "Official site of Soheil Faghih Nasiri — guitarist, composer, and music instructor. Listen to his music, watch him play, and follow his work."
+  },
+  "nav": {
+    "home": "Home",
+    "music": "Music",
+    "videos": "Videos",
+    "shop": "Shop",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close menu",
+    "language": "Language"
+  },
+  "hero": {
+    "kicker": "Guitarist · Composer · Music Instructor",
+    "statement": "Classical technique, electric soul — guitar as a way of listening closely to the world.",
+    "listenNow": "Listen Now",
+    "watchLatest": "Watch Latest",
+    "basedIn": "Based in France",
+    "tag1": "Classical Guitar",
+    "tag2": "Persian Roots"
+  },
+  "music": {
+    "kicker": "Latest Music",
+    "title": "Recent releases",
+    "intro": "A mix of original compositions and personal arrangements, drawing on classical guitar technique and Persian musical roots.",
+    "viewAll": "View all on Spotify",
+    "listenOn": "Listen on",
+    "single": "Single",
+    "album": "Album",
+    "pageTitle": "Music",
+    "pageIntro": "Every release, streaming everywhere."
+  },
+  "videos": {
+    "kicker": "Latest Videos",
+    "title": "Watch him play",
+    "intro": "Performances, covers, and technique — filmed and shared directly.",
+    "viewAll": "View all on YouTube",
+    "play": "Play video",
+    "watchOnYoutube": "Watch on YouTube",
+    "pageTitle": "Videos",
+    "pageIntro": "Recent performances and covers from the YouTube channel."
+  },
+  "discovery": {
+    "kicker": "Follow & Listen",
+    "title": "Find Soheil everywhere",
+    "followers": "followers",
+    "subscribers": "subscribers",
+    "monthlyListeners": "monthly listeners"
+  },
+  "shop": {
+    "kicker": "Music Store",
+    "title": "Original melodies",
+    "intro": "Compositions and instrumental pieces, available to license and download. The catalog below is being prepared — check back soon.",
+    "comingSoon": "Coming soon",
+    "preview": "Preview",
+    "previewUnavailable": "Preview coming soon",
+    "buy": "Buy",
+    "notifyMe": "This catalog isn't live yet",
+    "pageTitle": "Shop",
+    "pageIntro": "Original melodies and compositions by Soheil Faghih Nasiri.",
+    "lessonsTitle": "Guitar & music lessons",
+    "lessonsBody": "Soheil also teaches guitar and music. Message him on Instagram for details and registration.",
+    "lessonsCta": "Message on Instagram",
+    "checkoutError": "Checkout isn't available yet for this item.",
+    "securePayment": "Secure checkout via Stripe. No card details are stored on this site.",
+    "priceFrom": "from"
+  },
+  "about": {
+    "kicker": "About",
+    "title": "About Soheil",
+    "body1": "Soheil Faghih Nasiri is a guitarist, composer, and music instructor based in France. His playing moves between classical guitar repertoire — Segovia, Merlin — and electric guitar covers shaped by players like Gary Moore, alongside original compositions rooted in Persian musical traditions.",
+    "body2": "Alongside performing and recording, Soheil teaches guitar and music, working with students one phrase, one technique at a time.",
+    "cta": "Read more"
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Get in touch",
+    "body": "For lessons, collaborations, or bookings, the fastest way to reach Soheil is on Instagram.",
+    "instagramCta": "Message on Instagram",
+    "followElsewhere": "Follow elsewhere"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "legal": "Legal Notice",
+    "sitemap": "Site",
+    "platforms": "Platforms",
+    "social": "Social"
+  },
+  "common": {
+    "loading": "Loading…",
+    "close": "Close",
+    "back": "Back",
+    "skipToContent": "Skip to content"
+  }
+}

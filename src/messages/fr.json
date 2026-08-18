@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Soheil Faghih Nasiri — Guitariste & Compositeur",
+    "description": "Site officiel de Soheil Faghih Nasiri — guitariste, compositeur et professeur de musique. Écoutez sa musique, regardez-le jouer et suivez son travail."
+  },
+  "nav": {
+    "home": "Accueil",
+    "music": "Musique",
+    "videos": "Vidéos",
+    "shop": "Boutique",
+    "about": "À propos",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Fermer le menu",
+    "language": "Langue"
+  },
+  "hero": {
+    "kicker": "Guitariste · Compositeur · Professeur de musique",
+    "statement": "Technique classique, âme électrique — la guitare comme une façon d'écouter le monde de plus près.",
+    "listenNow": "Écouter",
+    "watchLatest": "Voir la dernière vidéo",
+    "basedIn": "Basé en France",
+    "tag1": "Guitare Classique",
+    "tag2": "Racines Persanes"
+  },
+  "music": {
+    "kicker": "Dernières sorties",
+    "title": "Sorties récentes",
+    "intro": "Compositions originales et arrangements personnels, entre technique de guitare classique et racines musicales persanes.",
+    "viewAll": "Tout voir sur Spotify",
+    "listenOn": "Écouter sur",
+    "single": "Single",
+    "album": "Album",
+    "pageTitle": "Musique",
+    "pageIntro": "Toutes les sorties, disponibles partout en streaming."
+  },
+  "videos": {
+    "kicker": "Dernières vidéos",
+    "title": "Le voir jouer",
+    "intro": "Performances, reprises et technique — filmées et partagées directement.",
+    "viewAll": "Tout voir sur YouTube",
+    "play": "Lire la vidéo",
+    "watchOnYoutube": "Voir sur YouTube",
+    "pageTitle": "Vidéos",
+    "pageIntro": "Performances et reprises récentes de la chaîne YouTube."
+  },
+  "discovery": {
+    "kicker": "Suivre & écouter",
+    "title": "Retrouvez Soheil partout",
+    "followers": "abonnés",
+    "subscribers": "abonnés",
+    "monthlyListeners": "auditeurs mensuels"
+  },
+  "shop": {
+    "kicker": "Boutique de musique",
+    "title": "Mélodies originales",
+    "intro": "Compositions et pièces instrumentales, disponibles à la licence et au téléchargement. Le catalogue ci-dessous est en préparation — revenez bientôt.",
+    "comingSoon": "Bientôt disponible",
+    "preview": "Extrait",
+    "previewUnavailable": "Extrait bientôt disponible",
+    "buy": "Acheter",
+    "notifyMe": "Ce catalogue n'est pas encore en ligne",
+    "pageTitle": "Boutique",
+    "pageIntro": "Mélodies et compositions originales de Soheil Faghih Nasiri.",
+    "lessonsTitle": "Cours de guitare et de musique",
+    "lessonsBody": "Soheil donne également des cours de guitare et de musique. Contactez-le sur Instagram pour les détails et l'inscription.",
+    "lessonsCta": "Contacter sur Instagram",
+    "checkoutError": "Le paiement n'est pas encore disponible pour cet article.",
+    "securePayment": "Paiement sécurisé via Stripe. Aucune donnée bancaire n'est stockée sur ce site.",
+    "priceFrom": "à partir de"
+  },
+  "about": {
+    "kicker": "À propos",
+    "title": "À propos de Soheil",
+    "body1": "Soheil Faghih Nasiri est guitariste, compositeur et professeur de musique basé en France. Son jeu navigue entre le répertoire de guitare classique — Segovia, Merlin — et des reprises à la guitare électrique influencées par des musiciens comme Gary Moore, aux côtés de compositions originales ancrées dans les traditions musicales persanes.",
+    "body2": "En parallèle de la scène et de l'enregistrement, Soheil enseigne la guitare et la musique, phrase après phrase, technique après technique.",
+    "cta": "En savoir plus"
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Prendre contact",
+    "body": "Pour des cours, des collaborations ou des concerts, le moyen le plus rapide de contacter Soheil est Instagram.",
+    "instagramCta": "Contacter sur Instagram",
+    "followElsewhere": "Suivre ailleurs"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "legal": "Mentions légales",
+    "sitemap": "Site",
+    "platforms": "Plateformes",
+    "social": "Réseaux sociaux"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "close": "Fermer",
+    "back": "Retour",
+    "skipToContent": "Aller au contenu"
+  }
+}

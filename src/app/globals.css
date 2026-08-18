@@ -1,26 +1,184 @@
 @import "tailwindcss";
 
+@theme {
+  /* Typography */
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Motion */
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Breakpoints (Tailwind defaults kept, listed for clarity) */
+  --breakpoint-xs: 30rem;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #0b0a08;
+  --color-bg-raised: #141210;
+  --color-surface: #18160f;
+  --color-border: rgba(245, 241, 232, 0.1);
+  --color-border-strong: rgba(245, 241, 232, 0.2);
+  --color-fg: #f5f1e8;
+  --color-fg-muted: #a79c89;
+  --color-fg-subtle: #756a58;
+  --color-accent: #d9a552;
+  --color-accent-strong: #eebd6e;
+  --color-accent-contrast: #16140f;
+  --color-focus: #eebd6e;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root[data-theme="light"] {
+  --color-bg: #faf7f0;
+  --color-bg-raised: #f2ede0;
+  --color-surface: #ffffff;
+  --color-border: rgba(23, 21, 18, 0.1);
+  --color-border-strong: rgba(23, 21, 18, 0.2);
+  --color-fg: #171512;
+  --color-fg-muted: #5a5347;
+  --color-fg-subtle: #837a6a;
+  --color-accent: #a8631c;
+  --color-accent-strong: #8a4f14;
+  --color-accent-contrast: #ffffff;
+  --color-focus: #8a4f14;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --color-bg: #faf7f0;
+    --color-bg-raised: #f2ede0;
+    --color-surface: #ffffff;
+    --color-border: rgba(23, 21, 18, 0.1);
+    --color-border-strong: rgba(23, 21, 18, 0.2);
+    --color-fg: #171512;
+    --color-fg-muted: #5a5347;
+    --color-fg-subtle: #837a6a;
+    --color-accent: #a8631c;
+    --color-accent-strong: #8a4f14;
+    --color-accent-contrast: #ffffff;
+    --color-focus: #8a4f14;
   }
 }
 
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-bg-raised: var(--color-bg-raised);
+  --color-surface: var(--color-surface);
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+  --color-fg: var(--color-fg);
+  --color-fg-muted: var(--color-fg-muted);
+  --color-fg-subtle: var(--color-fg-subtle);
+  --color-accent: var(--color-accent);
+  --color-accent-strong: var(--color-accent-strong);
+  --color-accent-contrast: var(--color-accent-contrast);
+  --color-focus: var(--color-focus);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 18s linear infinite;
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container-editorial {
+  width: 100%;
+  max-width: 84rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container-editorial {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-editorial {
+    padding-inline: 3rem;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Visually hidden but accessible */
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

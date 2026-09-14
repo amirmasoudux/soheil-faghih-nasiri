@@ -23,7 +23,7 @@
   },
   "concert": {
     "kicker": "A Historic Performance",
-    "title": "The Concert Heard Across Iran",
+    "title": "The Concert Heard Across the World",
     "body": "In a symbolic, audience-free concert filmed at the Deir-e Gachin Caravanserai and broadcast live on YouTube, Soheil performed as guitarist and composer alongside singer Parastoo Ahmadi. Performed without a hijab, it became one of the most widely covered acts of musical defiance inside Iran in recent years — drawing millions of views, international press coverage, and legal consequences for its performers.",
     "creditVocals": "Vocals — Parastoo Ahmadi",
     "creditGuitar": "Guitar & Composition — Soheil Faghih Nasiri"
@@ -51,10 +51,7 @@
   },
   "discovery": {
     "kicker": "Follow & Listen",
-    "title": "Find Soheil everywhere",
-    "followers": "followers",
-    "subscribers": "subscribers",
-    "monthlyListeners": "monthly listeners"
+    "title": "Find Soheil everywhere"
   },
   "shop": {
     "kicker": "Music Store",

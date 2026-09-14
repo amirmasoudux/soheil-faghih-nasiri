@@ -14,7 +14,3 @@ export function formatMonthYear(isoMonth: string, locale: string) {
     timeZone: "UTC",
   }).format(date);
 }
-
-export function formatCompactNumber(value: number, locale: string) {
-  return new Intl.NumberFormat(locale, { notation: "compact" }).format(value);
-}

@@ -13,7 +13,7 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-(--color-bg)">
-      <div className="grid lg:grid-cols-2">
+      <div className="grid lg:grid-cols-[620fr_820fr]">
         <motion.div
           className="relative h-[46svh] sm:h-[56svh] lg:h-[90vh]"
           initial={{ scale: 1 }}
@@ -25,27 +25,37 @@ export function Hero() {
             alt=""
             fill
             priority
-            sizes="(min-width: 1024px) 50vw, 100vw"
+            sizes="(min-width: 1024px) 43vw, 100vw"
             className="object-cover"
             style={{
-              objectPosition: "center 22%",
+              objectPosition: "34% 40%",
               filter: "saturate(0.68) contrast(1.05)",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-(--color-bg) via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:from-0% lg:via-66% lg:to-(--color-bg) lg:to-100%" />
         </motion.div>
 
-        <div className="relative isolate flex flex-col justify-center bg-(--color-bg) px-6 py-14 sm:px-10 sm:py-20 lg:px-16">
+        <div className="relative isolate flex flex-col justify-center bg-(--color-bg) px-6 py-14 sm:px-10 sm:py-20 lg:py-[76px] lg:pl-20 lg:pr-[72px]">
           <FretboardOverlay />
 
-          <motion.p
+          <motion.div
             initial={shouldReduceMotion ? undefined : { opacity: 0, y: 12 }}
             animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="font-mono-label text-xs uppercase tracking-[0.2em] text-(--color-accent)"
+            className="font-mono-label flex flex-wrap gap-x-7 gap-y-1 text-xs uppercase tracking-[0.2em]"
           >
-            {t("kicker")} · {t("basedIn")}
-          </motion.p>
+            {t("kicker")
+              .split(" · ")
+              .concat(t("basedIn"))
+              .map((segment, i) => (
+                <span
+                  key={segment}
+                  className={i === 0 ? "text-(--color-accent)" : "text-(--color-fg-subtle)"}
+                >
+                  {segment}
+                </span>
+              ))}
+          </motion.div>
 
           <motion.h1
             initial={shouldReduceMotion ? undefined : { opacity: 0, y: 20 }}

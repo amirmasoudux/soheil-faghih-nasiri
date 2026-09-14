@@ -4,9 +4,8 @@ import { useTranslations } from "next-intl";
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { FretboardOverlay } from "@/components/fretboard-overlay";
 import { artist } from "@/content/artist";
-
-const numerals = ["III", "V", "VII", "IX"];
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -36,15 +35,8 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-(--color-bg) via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:from-0% lg:via-66% lg:to-(--color-bg) lg:to-100%" />
         </motion.div>
 
-        <div className="bg-grid relative flex flex-col justify-center bg-(--color-bg) px-6 py-14 sm:px-10 sm:py-20 lg:px-16">
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute right-8 top-8 h-1.5 w-1.5 rounded-full bg-(--color-fg)/20 lg:right-16"
-          />
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute bottom-24 right-24 hidden h-1.5 w-1.5 rounded-full bg-(--color-fg)/20 lg:block"
-          />
+        <div className="relative flex flex-col justify-center bg-(--color-bg) px-6 py-14 sm:px-10 sm:py-20 lg:px-16">
+          <FretboardOverlay />
 
           <motion.p
             initial={shouldReduceMotion ? undefined : { opacity: 0, y: 12 }}
@@ -88,15 +80,6 @@ export function Hero() {
               {t("watchLatest")}
             </Button>
           </motion.div>
-
-          <div
-            aria-hidden="true"
-            className="font-mono-label mt-14 hidden items-center gap-10 text-xs uppercase tracking-[0.2em] text-(--color-fg)/25 lg:flex"
-          >
-            {numerals.map((n) => (
-              <span key={n}>{n}</span>
-            ))}
-          </div>
         </div>
       </div>
     </section>

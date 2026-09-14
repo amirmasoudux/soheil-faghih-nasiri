@@ -39,7 +39,7 @@ export default async function ShopPage({
       </p>
 
       {lessonsOffer.available && (
-        <div className="mt-20 rounded-2xl border border-(--color-border) bg-(--color-surface) p-8 text-center sm:p-12">
+        <div className="mt-20 border border-(--color-border) bg-(--color-surface) p-8 text-center sm:p-12">
           <h2 className="font-display text-2xl sm:text-3xl">
             {t("lessonsTitle")}
           </h2>

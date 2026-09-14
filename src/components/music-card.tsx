@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import type { MusicRelease } from "@/content/music";
 
 export function MusicCard({ release }: { release: MusicRelease }) {
@@ -6,19 +7,15 @@ export function MusicCard({ release }: { release: MusicRelease }) {
 
   return (
     <div className="group flex h-full flex-col overflow-hidden border border-(--color-border) bg-(--color-surface) transition-all duration-300 ease-[var(--ease-editorial)] hover:-translate-y-1.5 hover:border-(--color-accent) hover:shadow-xl hover:shadow-black/10">
-      <div className="relative flex aspect-square w-full items-center justify-center overflow-hidden bg-gradient-to-br from-(--color-bg-raised) to-(--color-surface)">
-        <svg
-          width="56"
-          height="56"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          className="text-(--color-accent)/70 transition-transform duration-500 ease-[var(--ease-editorial)] group-hover:scale-110"
-        >
-          <path
-            fill="currentColor"
-            d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6Z"
-          />
-        </svg>
+      <div className="relative aspect-square w-full overflow-hidden bg-(--color-bg-raised)">
+        <Image
+          src={release.coverImage}
+          alt={`${release.title} cover art`}
+          fill
+          sizes="(min-width: 1024px) 33vw, 100vw"
+          className="object-cover grayscale transition-all duration-500 ease-[var(--ease-editorial)] group-hover:grayscale-0 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
         <span className="absolute left-4 top-4 rounded-full bg-(--color-bg)/80 px-3 py-1 text-xs font-medium uppercase tracking-wider text-(--color-fg-muted) backdrop-blur">
           {release.type === "album" ? t("album") : t("single")}
         </span>
@@ -35,7 +32,7 @@ export function MusicCard({ release }: { release: MusicRelease }) {
             href={release.spotifyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-(--color-border-strong) px-3.5 py-1.5 text-xs font-medium transition-colors hover:border-(--color-accent) hover:text-(--color-accent-strong)"
+            className="rounded-xl border border-(--color-border-strong) px-3.5 py-1.5 text-xs font-medium transition-colors hover:border-(--color-accent) hover:text-(--color-accent-strong)"
           >
             Spotify
           </a>
@@ -44,7 +41,7 @@ export function MusicCard({ release }: { release: MusicRelease }) {
               href={release.appleMusicUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-(--color-border-strong) px-3.5 py-1.5 text-xs font-medium transition-colors hover:border-(--color-accent) hover:text-(--color-accent-strong)"
+              className="rounded-xl border border-(--color-border-strong) px-3.5 py-1.5 text-xs font-medium transition-colors hover:border-(--color-accent) hover:text-(--color-accent-strong)"
             >
               Apple Music
             </a>

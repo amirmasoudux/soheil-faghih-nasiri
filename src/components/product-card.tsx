@@ -36,7 +36,7 @@ export function ProductCard({ product }: { product: Product }) {
   }
 
   return (
-    <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-(--color-border) bg-(--color-surface) transition-all duration-300 ease-[var(--ease-editorial)] hover:-translate-y-1.5 hover:border-(--color-accent) hover:shadow-xl hover:shadow-black/10">
+    <div className="group flex h-full flex-col overflow-hidden border border-(--color-border) bg-(--color-surface) transition-all duration-300 ease-[var(--ease-editorial)] hover:-translate-y-1.5 hover:border-(--color-accent) hover:shadow-xl hover:shadow-black/10">
       <div className="relative flex aspect-square w-full items-center justify-center overflow-hidden bg-gradient-to-br from-(--color-bg-raised) to-(--color-surface)">
         <svg
           width="48"
@@ -87,7 +87,7 @@ export function ProductCard({ product }: { product: Product }) {
             type="button"
             disabled={product.comingSoon || loading}
             onClick={handleBuy}
-            className="rounded-full bg-(--color-accent) px-5 py-2 text-sm font-medium text-(--color-accent-contrast) transition-colors hover:bg-(--color-accent-strong) disabled:opacity-40"
+            className="rounded-xl bg-(--color-accent) px-5 py-2 text-sm font-medium text-(--color-accent-contrast) transition-colors hover:bg-(--color-accent-strong) disabled:opacity-40"
           >
             {t("buy")}
           </button>

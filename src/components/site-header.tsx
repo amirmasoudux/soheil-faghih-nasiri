@@ -55,7 +55,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-(--color-border) lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-xl border border-(--color-border) lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? t("close") : t("menu")}

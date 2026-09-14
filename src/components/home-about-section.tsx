@@ -14,7 +14,7 @@ export function HomeAboutSection() {
     <section className="border-t border-(--color-border) py-20 sm:py-28">
       <div className="container-editorial grid items-center gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
         <Reveal>
-          <div className="relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden rounded-2xl border border-(--color-border) lg:mx-0">
+          <div className="relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden border border-(--color-border) lg:mx-0">
             <Image
               src={artist.avatarImage}
               alt={artist.name}

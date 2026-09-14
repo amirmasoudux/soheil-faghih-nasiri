@@ -5,11 +5,12 @@ export const artist = {
   name: "Soheil Faghih Nasiri",
   roles: ["Guitarist", "Composer", "Music Instructor"] as const,
   location: "France",
-  // Real avatar + banner pulled directly from Soheil's own public YouTube channel.
+  // Real avatar pulled from Soheil's own public YouTube channel.
   avatarImage:
     "https://yt3.googleusercontent.com/XD6_pOAEsEtNqxl98wvRF4teyNhzo3KwopMT7Rr2p2N05LrAeGSNQJ71nd76PlWSH6tM5_k=s900-c-k-c0x00ffffff-no-rj",
-  bannerImage:
-    "https://yt3.googleusercontent.com/UNtJkPjq5Bv2IEz4kGZQYHMbWKEZewEOwHhE1QN-BhhUhRqUQ_P-FC8jldm3UZH0CByV6lhG26M=w2276-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+  // Hero photo — supplied directly by Soheil/his team.
+  heroImage: "/images/hero-group.jpg",
+  soloImage: "/images/soheil-solo.jpg",
 } as const;
 
 export const socialLinks = {

@@ -2,8 +2,9 @@
 
 @theme {
   /* Typography */
-  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-barlow-condensed), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono-label: var(--font-dm-mono), ui-monospace, monospace;
 
   /* Motion */
   --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
@@ -12,51 +13,20 @@
   --breakpoint-xs: 30rem;
 }
 
+/* Committed dark theme — used for the whole site, not just the hero. */
 :root {
-  --color-bg: #0b0a08;
-  --color-bg-raised: #141210;
-  --color-surface: #18160f;
-  --color-border: rgba(245, 241, 232, 0.1);
-  --color-border-strong: rgba(245, 241, 232, 0.2);
-  --color-fg: #f5f1e8;
-  --color-fg-muted: #a79c89;
-  --color-fg-subtle: #756a58;
-  --color-accent: #d9a552;
-  --color-accent-strong: #eebd6e;
-  --color-accent-contrast: #16140f;
-  --color-focus: #eebd6e;
-}
-
-:root[data-theme="light"] {
-  --color-bg: #faf7f0;
-  --color-bg-raised: #f2ede0;
-  --color-surface: #ffffff;
-  --color-border: rgba(23, 21, 18, 0.1);
-  --color-border-strong: rgba(23, 21, 18, 0.2);
-  --color-fg: #171512;
-  --color-fg-muted: #5a5347;
-  --color-fg-subtle: #837a6a;
-  --color-accent: #a8631c;
-  --color-accent-strong: #8a4f14;
-  --color-accent-contrast: #ffffff;
-  --color-focus: #8a4f14;
-}
-
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --color-bg: #faf7f0;
-    --color-bg-raised: #f2ede0;
-    --color-surface: #ffffff;
-    --color-border: rgba(23, 21, 18, 0.1);
-    --color-border-strong: rgba(23, 21, 18, 0.2);
-    --color-fg: #171512;
-    --color-fg-muted: #5a5347;
-    --color-fg-subtle: #837a6a;
-    --color-accent: #a8631c;
-    --color-accent-strong: #8a4f14;
-    --color-accent-contrast: #ffffff;
-    --color-focus: #8a4f14;
-  }
+  --color-bg: #0b0b0c;
+  --color-bg-raised: #141416;
+  --color-surface: #17171a;
+  --color-border: rgba(242, 240, 236, 0.1);
+  --color-border-strong: rgba(242, 240, 236, 0.3);
+  --color-fg: #f2f0ec;
+  --color-fg-muted: #9c968d;
+  --color-fg-subtle: #8d8880;
+  --color-accent: #e0994a;
+  --color-accent-strong: #eaad6a;
+  --color-accent-contrast: #0b0b0c;
+  --color-focus: #eaad6a;
 }
 
 @theme inline {
@@ -82,10 +52,6 @@ html {
   color-scheme: dark;
 }
 
-:root[data-theme="light"] {
-  color-scheme: light;
-}
-
 body {
   background: var(--color-bg);
   color: var(--color-fg);
@@ -109,17 +75,15 @@ body {
   font-family: var(--font-display);
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-25%);
-  }
+.font-mono-label {
+  font-family: var(--font-mono-label);
 }
 
-.animate-marquee {
-  animation: marquee 28s linear infinite;
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(242, 240, 236, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(242, 240, 236, 0.1) 1px, transparent 1px);
+  background-size: 74px 88px;
 }
 
 @keyframes spin-slow {

@@ -25,24 +25,9 @@ export function SiteHeader() {
       <div className="container-editorial flex h-16 items-center justify-between sm:h-20">
         <Link
           href="/"
-          className="flex items-center gap-2.5 font-display text-lg tracking-tight sm:gap-3 sm:text-xl"
+          className="font-display text-lg tracking-tight sm:text-xl"
         >
-          <span
-            aria-hidden="true"
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-(--color-border-strong) text-(--color-accent) sm:h-10 sm:w-10"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M15.5 3.5c2 2 2.3 4.8.8 6.9l-7 9.7a2.1 2.1 0 0 1-3.4-2.4l6.6-9.9c1.4-2.1 1-4.9-1-6.8"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <circle cx="7" cy="18.2" r="1.6" fill="currentColor" />
-            </svg>
-          </span>
-          <span>Soheil Faghih Nasiri</span>
+          Soheil Faghih Nasiri
         </Link>
 
         <nav

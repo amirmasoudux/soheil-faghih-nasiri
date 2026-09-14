@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Barlow_Condensed, DM_Mono, Space_Grotesk } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -8,16 +8,24 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import "../globals.css";
 
-const fraunces = Fraunces({
+const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
-  variable: "--font-fraunces",
-  axes: ["opsz", "SOFT", "WONK"],
+  weight: ["500", "600", "700"],
+  variable: "--font-barlow-condensed",
   display: "swap",
 });
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-dm-mono",
   display: "swap",
 });
 
@@ -82,7 +90,10 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${fraunces.variable} ${inter.variable}`}>
+    <html
+      lang={locale}
+      className={`${barlowCondensed.variable} ${spaceGrotesk.variable} ${dmMono.variable}`}
+    >
       <body className="min-h-dvh antialiased">
         <NextIntlClientProvider locale={locale}>
           <a href="#main-content" className="sr-only-focusable">

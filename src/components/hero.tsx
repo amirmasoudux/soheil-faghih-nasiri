@@ -35,7 +35,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-(--color-bg) via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:from-0% lg:via-66% lg:to-(--color-bg) lg:to-100%" />
         </motion.div>
 
-        <div className="relative flex flex-col justify-center bg-(--color-bg) px-6 py-14 sm:px-10 sm:py-20 lg:px-16">
+        <div className="relative isolate flex flex-col justify-center bg-(--color-bg) px-6 py-14 sm:px-10 sm:py-20 lg:px-16">
           <FretboardOverlay />
 
           <motion.p

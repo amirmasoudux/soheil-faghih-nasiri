@@ -21,6 +21,13 @@
     "watchLatest": "Voir la dernière vidéo",
     "basedIn": "Basé en France"
   },
+  "concert": {
+    "kicker": "Un moment historique",
+    "title": "Le concert qui a résonné dans tout l'Iran",
+    "body": "Lors d'un concert symbolique, sans public, filmé au caravansérail de Deir-e Gachin et diffusé en direct sur YouTube, Soheil a joué en tant que guitariste et compositeur aux côtés de la chanteuse Parastoo Ahmadi. Interprété sans hijab, ce concert est devenu l'un des actes de défiance musicale les plus médiatisés en Iran ces dernières années — réunissant des millions de vues, une couverture de presse internationale, et des conséquences judiciaires pour ses interprètes.",
+    "creditVocals": "Chant — Parastoo Ahmadi",
+    "creditGuitar": "Guitare & Composition — Soheil Faghih Nasiri"
+  },
   "music": {
     "kicker": "Dernières sorties",
     "title": "Sorties récentes",

@@ -26,7 +26,10 @@ const STRING_HEIGHTS = [0.8, 1.3, 1.8, 2.3, 2.8, 3.3];
  */
 export function FretboardOverlay() {
   return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 -z-10 hidden lg:block"
+    >
       {STRING_Y.map((y, i) => (
         <div
           key={y}

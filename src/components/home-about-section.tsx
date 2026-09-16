@@ -7,6 +7,8 @@ import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { artist } from "@/content/artist";
 
+const goshtasbAcademyUrl = "https://goshtasbmusic.com/en/";
+
 export function HomeAboutSection() {
   const t = useTranslations("about");
 
@@ -18,9 +20,15 @@ export function HomeAboutSection() {
           <p className="mt-6 max-w-xl text-base text-(--color-fg-muted) sm:text-lg">
             {t("body1")}
           </p>
+          <p className="mt-4 max-w-xl text-base text-(--color-fg-muted) sm:text-lg">
+            {t("body2")}
+          </p>
+          <p className="mt-4 max-w-xl text-base text-(--color-fg-muted) sm:text-lg">
+            {t("body3")}
+          </p>
           <div className="mt-8">
-            <Button href="/about" variant="secondary">
-              {t("cta")}
+            <Button href={goshtasbAcademyUrl} external variant="secondary">
+              {t("academyCta")}
             </Button>
           </div>
         </Reveal>

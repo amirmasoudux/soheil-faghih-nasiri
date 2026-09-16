@@ -1,15 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 
-const routes = [
-  "",
-  "/music",
-  "/videos",
-  "/about",
-  "/contact",
-  "/privacy",
-  "/legal-notice",
-];
+const routes = ["", "/privacy", "/legal-notice"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://soheilfaghihnasiri.com";

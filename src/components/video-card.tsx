@@ -32,7 +32,7 @@ export function VideoCard({ video }: { video: Video }) {
           >
             <Image
               src={youtubeThumbnail(video.youtubeId)}
-              alt=""
+              alt={`${video.title} — video thumbnail`}
               fill
               sizes="(min-width: 1024px) 33vw, 100vw"
               className="object-cover transition-transform duration-500 ease-[var(--ease-editorial)] group-hover/play:scale-105"

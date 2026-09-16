@@ -17,7 +17,7 @@ export function HomeMusicSection() {
       <div className="container-editorial">
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHeading kicker={t("kicker")} title={t("title")} intro={t("intro")} />
+            <SectionHeading kicker={t("kicker")} title={t("title")} />
             <Button href={socialLinks.spotify.url} external size="md" variant="secondary">
               {t("viewAll")}
             </Button>

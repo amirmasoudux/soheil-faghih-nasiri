@@ -35,7 +35,7 @@ export function Hero() {
         <div className="animate-hero-zoom relative h-[46svh] sm:h-[56svh] lg:h-[90vh]">
           <Image
             src={artist.soloImage}
-            alt=""
+            alt="Soheil Faghih Nasiri playing electric guitar"
             fill
             priority
             sizes="(min-width: 1024px) 43vw, 100vw"

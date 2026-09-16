@@ -16,20 +16,36 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://soheilfaghihnasiri.com";
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MusicGroup",
+    "@type": "Person",
     name: artist.name,
-    genre: ["Classical Guitar", "Instrumental"],
-    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://soheilfaghihnasiri.com",
-    image: artist.avatarImage,
+    jobTitle: "Guitarist, Composer, Music Instructor",
+    description:
+      "Iranian composer and classical & electric guitarist, born in Nowshahr, Iran, currently based in France.",
+    nationality: "Iranian",
+    birthPlace: "Nowshahr, Iran",
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Art University of Tehran",
+    },
+    worksFor: {
+      "@type": "Organization",
+      name: "Goshtasb Music Academy",
+      url: "https://goshtasbmusic.com/en/",
+    },
+    url: siteUrl,
+    image: `${siteUrl}/images/soheil-solo.jpg`,
     sameAs: [
-      socialLinks.instagram.url,
-      socialLinks.youtube.url,
       socialLinks.spotify.url,
+      socialLinks.youtube.url,
+      socialLinks.instagram.url,
       socialLinks.appleMusic.url,
       socialLinks.amazonMusic.url,
       socialLinks.threads.url,
+      "https://goshtasbmusic.com/en/",
     ],
   };
 

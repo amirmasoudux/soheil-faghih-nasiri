@@ -63,11 +63,20 @@ export async function generateMetadata({
       siteName: "Soheil Faghih Nasiri",
       locale: locale === "fr" ? "fr_FR" : "en_US",
       type: "website",
+      images: [
+        {
+          url: "/images/soheil-solo.jpg",
+          width: 1280,
+          height: 1100,
+          alt: "Soheil Faghih Nasiri playing electric guitar",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
+      images: ["/images/soheil-solo.jpg"],
     },
     robots: {
       index: true,

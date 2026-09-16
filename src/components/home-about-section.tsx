@@ -38,6 +38,7 @@ export function HomeAboutSection() {
               src={artist.aboutImage}
               alt={artist.name}
               fill
+              unoptimized
               sizes="(min-width: 1024px) 40vw, 80vw"
               className="object-cover"
             />

@@ -32,7 +32,7 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2.5 text-sm">
             <li>
               <Link
-                href="/music"
+                href="/#music"
                 className="text-(--color-fg-muted) hover:text-(--color-fg)"
               >
                 {t("nav.music")}
@@ -40,7 +40,7 @@ export function SiteFooter() {
             </li>
             <li>
               <Link
-                href="/videos"
+                href="/#videos"
                 className="text-(--color-fg-muted) hover:text-(--color-fg)"
               >
                 {t("nav.videos")}
@@ -48,7 +48,7 @@ export function SiteFooter() {
             </li>
             <li>
               <Link
-                href="/about"
+                href="/#about"
                 className="text-(--color-fg-muted) hover:text-(--color-fg)"
               >
                 {t("nav.about")}
@@ -56,7 +56,7 @@ export function SiteFooter() {
             </li>
             <li>
               <Link
-                href="/contact"
+                href="/#contact"
                 className="text-(--color-fg-muted) hover:text-(--color-fg)"
               >
                 {t("nav.contact")}

@@ -2,17 +2,16 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
   { href: "/", key: "home" },
-  { href: "/music", key: "music" },
-  { href: "/videos", key: "videos" },
-  { href: "/about", key: "about" },
-  { href: "/contact", key: "contact" },
+  { href: "/#music", key: "music" },
+  { href: "/#videos", key: "videos" },
+  { href: "/#about", key: "about" },
+  { href: "/#contact", key: "contact" },
 ] as const;
 
 export function SiteHeader() {
@@ -47,7 +46,7 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <LanguageSwitcher />
-          <Button href="/music" size="md">
+          <Button href="/#music" size="md">
             {t("music")}
           </Button>
         </div>
@@ -87,41 +86,40 @@ export function SiteHeader() {
         </button>
       </div>
 
-      <AnimatePresence>
-        {open && (
-          <motion.nav
-            id="mobile-nav"
-            aria-label="Primary"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden border-t border-(--color-border) bg-(--color-bg) lg:hidden"
-          >
-            <ul className="flex flex-col divide-y divide-(--color-border) px-5 pt-2">
-              {navItems.map((item, i) => (
-                <motion.li
-                  key={item.key}
-                  initial={{ opacity: 0, x: -12 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: i * 0.04 }}
+      <nav
+        id="mobile-nav"
+        aria-label="Primary"
+        aria-hidden={!open}
+        className={`grid overflow-hidden border-(--color-border) bg-(--color-bg) transition-[grid-template-rows,border-top-width] duration-300 ease-[var(--ease-editorial)] lg:hidden ${
+          open ? "grid-rows-[1fr] border-t" : "grid-rows-[0fr] border-t-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <ul className="flex flex-col divide-y divide-(--color-border) px-5 pt-2">
+            {navItems.map((item, i) => (
+              <li
+                key={item.key}
+                className={`transition-all duration-300 ease-[var(--ease-editorial)] ${
+                  open ? "translate-x-0 opacity-100" : "-translate-x-3 opacity-0"
+                }`}
+                style={{ transitionDelay: open ? `${i * 0.04}s` : "0s" }}
+              >
+                <Link
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  tabIndex={open ? undefined : -1}
+                  className="block py-3.5 text-base font-medium text-(--color-fg)"
                 >
-                  <Link
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block py-3.5 text-base font-medium text-(--color-fg)"
-                  >
-                    {t(item.key)}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-            <div className="flex items-center justify-between px-5 pb-6 pt-4">
-              <LanguageSwitcher />
-            </div>
-          </motion.nav>
-        )}
-      </AnimatePresence>
+                  {t(item.key)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="flex items-center justify-between px-5 pb-6 pt-4">
+            <LanguageSwitcher />
+          </div>
+        </div>
+      </nav>
     </header>
   );
 }

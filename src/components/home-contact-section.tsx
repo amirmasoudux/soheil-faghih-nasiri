@@ -10,7 +10,7 @@ export function HomeContactSection() {
   const t = useTranslations("contact");
 
   return (
-    <section className="border-t border-(--color-border) py-20 sm:py-28">
+    <section id="contact" className="border-t border-(--color-border) py-20 sm:py-28">
       <div className="container-editorial">
         <Reveal>
           <SectionHeading

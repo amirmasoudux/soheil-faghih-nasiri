@@ -50,6 +50,31 @@
 
 html {
   color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+/* Offset in-page anchor targets so the sticky header doesn't cover them. */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+.animate-hero-zoom {
+  animation: hero-zoom 18s linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-zoom {
+    animation: none;
+  }
 }
 
 body {

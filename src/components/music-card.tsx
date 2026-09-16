@@ -6,7 +6,7 @@ export function MusicCard({ release }: { release: MusicRelease }) {
   const t = useTranslations("music");
 
   return (
-    <div className="group flex h-full flex-col overflow-hidden border border-(--color-border) bg-(--color-surface) transition-all duration-300 ease-[var(--ease-editorial)] hover:-translate-y-1.5 hover:border-(--color-accent) hover:shadow-xl hover:shadow-black/10">
+    <div className="group flex h-full flex-col overflow-hidden rounded-xl border border-(--color-border) bg-(--color-surface) transition-all duration-300 ease-[var(--ease-editorial)] hover:-translate-y-1.5 hover:border-(--color-accent) hover:shadow-xl hover:shadow-(--color-accent)/20">
       <div className="relative aspect-square w-full overflow-hidden bg-(--color-bg-raised)">
         <Image
           src={release.coverImage}

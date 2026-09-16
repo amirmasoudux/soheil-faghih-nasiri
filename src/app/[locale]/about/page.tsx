@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
-import { artist, socialLinks } from "@/content/artist";
+import { artist } from "@/content/artist";
+
+const goshtasbAcademyUrl = "https://goshtasbmusic.com/en/";
 
 export async function generateMetadata({
   params,
@@ -39,11 +41,8 @@ export default async function AboutPage({
             {t("body3")}
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button href={socialLinks.instagram.url} external>
-              Instagram
-            </Button>
-            <Button href={socialLinks.spotify.url} external variant="secondary">
-              Spotify
+            <Button href={goshtasbAcademyUrl} external>
+              {t("academyCta")}
             </Button>
           </div>
         </div>

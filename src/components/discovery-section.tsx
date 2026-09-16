@@ -39,7 +39,7 @@ export function DiscoverySection() {
                   href={platform.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-full flex-col items-center justify-center gap-3 border border-(--color-border) bg-(--color-surface) px-4 py-7 text-center transition-all duration-300 ease-[var(--ease-editorial)] hover:-translate-y-1 hover:border-(--color-accent) hover:shadow-lg hover:shadow-black/10"
+                  className="flex h-full flex-col items-center justify-center gap-3 rounded-xl border border-(--color-border) bg-(--color-surface) px-4 py-7 text-center transition-all duration-300 ease-[var(--ease-editorial)] hover:-translate-y-1 hover:border-(--color-accent) hover:shadow-lg hover:shadow-(--color-accent)/20"
                 >
                   <platform.Icon className="h-6 w-6 text-(--color-accent)" />
                   <span className="font-display text-lg">{platform.name}</span>

@@ -12,7 +12,7 @@ export function HomeConcertSection() {
     <section className="border-t border-(--color-border) bg-(--color-bg) py-20 sm:py-28">
       <div className="container-editorial grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
-          <div className="relative aspect-3/2 w-full max-w-lg overflow-hidden border border-(--color-border)">
+          <div className="relative aspect-3/2 w-full max-w-lg overflow-hidden rounded-xl border border-(--color-border)">
             <Image
               src={artist.heroImage}
               alt="Soheil Faghih Nasiri performing guitar with Parastoo Ahmadi's band at the Deir-e Gachin Caravanserai"

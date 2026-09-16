@@ -4,7 +4,6 @@ import { HomeConcertSection } from "@/components/home-concert-section";
 import { HomeMusicSection } from "@/components/home-music-section";
 import { HomeVideosSection } from "@/components/home-videos-section";
 import { DiscoverySection } from "@/components/discovery-section";
-import { HomeShopTeaser } from "@/components/home-shop-teaser";
 import { HomeAboutSection } from "@/components/home-about-section";
 import { HomeContactSection } from "@/components/home-contact-section";
 import { artist, socialLinks } from "@/content/artist";
@@ -47,7 +46,6 @@ export default async function HomePage({
       <HomeMusicSection />
       <HomeVideosSection />
       <DiscoverySection />
-      <HomeShopTeaser />
       <HomeAboutSection />
       <HomeContactSection />
     </>

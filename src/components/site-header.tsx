@@ -11,7 +11,6 @@ const navItems = [
   { href: "/", key: "home" },
   { href: "/music", key: "music" },
   { href: "/videos", key: "videos" },
-  { href: "/shop", key: "shop" },
   { href: "/about", key: "about" },
   { href: "/contact", key: "contact" },
 ] as const;
@@ -48,8 +47,8 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <LanguageSwitcher />
-          <Button href="/shop" size="md">
-            {t("shop")}
+          <Button href="/music" size="md">
+            {t("music")}
           </Button>
         </div>
 

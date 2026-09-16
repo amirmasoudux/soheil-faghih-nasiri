@@ -7,7 +7,6 @@
     "home": "Home",
     "music": "Music",
     "videos": "Videos",
-    "shop": "Shop",
     "about": "About",
     "contact": "Contact",
     "menu": "Menu",
@@ -16,7 +15,7 @@
   },
   "hero": {
     "kicker": "Guitarist · Composer · Music Instructor",
-    "statement": "Classical technique, electric soul — guitar as a way of listening closely to the world.",
+    "statement": "A path through music",
     "listenNow": "Listen Now",
     "watchLatest": "Watch Latest",
     "basedIn": "France"
@@ -24,7 +23,7 @@
   "concert": {
     "kicker": "A Historic Performance",
     "title": "The Concert Heard Across the World",
-    "body": "In a symbolic, audience-free concert filmed at the Deir-e Gachin Caravanserai and broadcast live on YouTube, Soheil performed as guitarist and composer alongside singer Parastoo Ahmadi. Performed without a hijab, it became one of the most widely covered acts of musical defiance inside Iran in recent years — drawing millions of views, international press coverage, and legal consequences for its performers.",
+    "body": "In a symbolic, audience-free concert filmed at the Deir-e Gachin Caravanserai and broadcast live on YouTube, Soheil performed as guitarist and composer alongside singer Parastoo Ahmadi. The concert became one of the most widely covered acts of musical defiance inside Iran in recent years — drawing millions of views, international press coverage, and legal consequences for its performers.",
     "creditVocals": "Vocals — Parastoo Ahmadi",
     "creditGuitar": "Guitar & Composition — Soheil Faghih Nasiri"
   },
@@ -74,8 +73,9 @@
   "about": {
     "kicker": "About",
     "title": "About Soheil",
-    "body1": "Soheil Faghih Nasiri is a guitarist, composer, and music instructor based in France. His playing moves between classical guitar repertoire — Segovia, Merlin — and electric guitar covers shaped by players like Gary Moore, alongside original compositions rooted in Persian musical traditions.",
-    "body2": "Alongside performing and recording, Soheil teaches guitar and music, working with students one phrase, one technique at a time.",
+    "body1": "Soheil Faghih Nasiri is an Iranian composer and classical & electric guitarist, born in 1988 in Nowshahr, Iran. He holds a Bachelor's degree in Classical Guitar Performance and a Master's degree in Composition from the Art University of Tehran, and is currently continuing his advanced musical studies in France.",
+    "body2": "Active professionally since the age of 18, Soheil has collaborated on numerous albums, films, television series, and theatrical productions. He is also the founder and director of Goshtasb Music Academy, where he teaches guitar and solfège.",
+    "body3": "His artistic work includes collaborations with ensembles such as Saken-e-Ravan and Degardis, as well as the acclaimed Karvansara project with Parastoo Ahmadi and the album From Both Worlds. His work reflects a diverse musical language shaped by composition, classical guitar, electric guitar, and collaborative performance.",
     "cta": "Read more"
   },
   "contact": {

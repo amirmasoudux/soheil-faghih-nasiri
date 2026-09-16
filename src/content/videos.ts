@@ -1,7 +1,5 @@
-// Verified real videos from Soheil's YouTube channel
-// (youtube.com/@soheilfaghihnasiri, 40 videos as of research date).
-// Dates are approximate, derived from YouTube's relative "time ago" label
-// at the time of research (Aug 2026) — not exact upload timestamps.
+// Verified real videos, provided directly by Soheil (titles fetched via
+// YouTube's own oEmbed endpoint). Order matches what Soheil specified.
 
 export type Video = {
   id: string;
@@ -13,13 +11,6 @@ export type Video = {
 
 export const videos: Video[] = [
   {
-    id: "una-mattina",
-    youtubeId: "yfYUkV9YYG4",
-    title: "Una Mattina (Intouchables Soundtrack) — Classical Guitar Solo",
-    approxDate: "2026-08",
-    durationLabel: "2:31",
-  },
-  {
     id: "gary-moore-parisienne-walkways",
     youtubeId: "oN3MTiAZvXo",
     title: "Gary Moore — Parisienne Walkways (Guitar Cover)",
@@ -27,11 +18,25 @@ export const videos: Video[] = [
     durationLabel: "3:28",
   },
   {
-    id: "evocacion-jose-luis-merlin",
-    youtubeId: "Zov89il61MY",
-    title: "Evocación — José Luis Merlin (Classical Guitar Performance)",
-    approxDate: "2026-06",
-    durationLabel: "1:27",
+    id: "antonio-lauro-vals-venezolano-no-2",
+    youtubeId: "aQI-vGSs2l8",
+    title: "Antonio Lauro — Vals Venezolano No. 2 (Classical Guitar)",
+    approxDate: "2026-08",
+    durationLabel: "0:46",
+  },
+  {
+    id: "karvansara-concert-parastoo-ahmadi",
+    youtubeId: "oYcaDHEnhbU",
+    title: "Karvansara Concert — with Parastoo Ahmadi",
+    approxDate: "2024-12",
+    durationLabel: "27:37",
+  },
+  {
+    id: "song-7-parastoo-ahmadi",
+    youtubeId: "kUeJUtJdUNg",
+    title: "Song 7 — with Parastoo Ahmadi",
+    approxDate: "2024-03",
+    durationLabel: "3:19",
   },
 ];
 

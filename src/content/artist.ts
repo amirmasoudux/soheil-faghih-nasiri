@@ -11,6 +11,8 @@ export const artist = {
   // Hero photo — supplied directly by Soheil/his team.
   heroImage: "/images/hero-group.jpg",
   soloImage: "/images/soheil-solo.jpg",
+  // About-section portrait — supplied directly by Soheil.
+  aboutImage: "/images/soheil-about.jpg",
 } as const;
 
 export const socialLinks = {

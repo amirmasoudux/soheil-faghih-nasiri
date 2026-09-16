@@ -25,7 +25,7 @@ export function HomeMusicSection() {
         </Reveal>
         <Reveal delay={0.1} className="mt-12">
           <Carousel label={t("title")}>
-            {musicReleases.slice(0, 3).map((release) => (
+            {musicReleases.map((release) => (
               <MusicCard key={release.id} release={release} />
             ))}
           </Carousel>

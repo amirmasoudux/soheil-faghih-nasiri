@@ -48,14 +48,6 @@ export function SiteFooter() {
             </li>
             <li>
               <Link
-                href="/shop"
-                className="text-(--color-fg-muted) hover:text-(--color-fg)"
-              >
-                {t("nav.shop")}
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/about"
                 className="text-(--color-fg-muted) hover:text-(--color-fg)"
               >

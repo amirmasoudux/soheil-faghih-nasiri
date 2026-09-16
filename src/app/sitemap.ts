@@ -5,7 +5,6 @@ const routes = [
   "",
   "/music",
   "/videos",
-  "/shop",
   "/about",
   "/contact",
   "/privacy",

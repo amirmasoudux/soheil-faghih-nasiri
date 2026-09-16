@@ -12,7 +12,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "shop" });
-  return { title: t("pageTitle"), description: t("pageIntro") };
+  return {
+    title: t("pageTitle"),
+    description: t("pageIntro"),
+    // Unlinked while the shop is hidden — keep it out of search results.
+    robots: { index: false, follow: false },
+  };
 }
 
 export default async function ShopPage({

@@ -16,8 +16,8 @@ export type MusicRelease = {
 
 export const musicReleases: MusicRelease[] = [
   {
-    id: "from-both-worlds",
-    title: "From Both Worlds",
+    id: "of-both-worlds",
+    title: "Of Both Worlds",
     type: "album",
     year: 2021,
     spotifyUrl: "https://open.spotify.com/album/1DLmj6UDui2Qob3rYteH4j",

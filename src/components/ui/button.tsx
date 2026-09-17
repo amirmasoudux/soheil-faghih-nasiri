@@ -1,5 +1,6 @@
 import { type ComponentPropsWithoutRef } from "react";
 import { Link } from "@/i18n/navigation";
+import { scrollToHash } from "@/lib/scroll-to-hash";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "md" | "lg";
@@ -47,6 +48,22 @@ export function Button(props: ButtonAsLink | ButtonAsAnchor | ButtonAsButton) {
         target="_blank"
         rel="noopener noreferrer"
         {...anchorProps}
+      />
+    );
+  }
+
+  if ("href" in rest && rest.href.startsWith("#")) {
+    // Same-page section anchor: plain native <a> so it still works via
+    // browser default behavior before JS hydrates (matters in constrained
+    // in-app browsers like Instagram's). The onClick handles scrolling
+    // once hydrated, since Next's router otherwise resets scroll on hash
+    // navigation instead of letting the native jump happen.
+    const { href } = rest as ButtonAsAnchor;
+    return (
+      <a
+        className={classes}
+        {...(rest as ButtonAsAnchor)}
+        onClick={(e) => scrollToHash(e, href)}
       />
     );
   }

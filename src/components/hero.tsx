@@ -85,10 +85,10 @@ export function Hero() {
             className={`${items[3]} ${revealClass(mounted)}`}
             style={{ transitionDelay: mounted ? "0.3s" : "0s" }}
           >
-            <Button href="/#music" size="lg">
+            <Button href="#music" size="lg">
               {t("listenNow")}
             </Button>
-            <Button href="/#videos" size="lg" variant="secondary">
+            <Button href="#videos" size="lg" variant="secondary">
               {t("watchLatest")}
             </Button>
           </div>

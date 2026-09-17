@@ -1,6 +1,9 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { socialLinks } from "@/content/artist";
+import { scrollToHash } from "@/lib/scroll-to-hash";
 
 const platformLinks = [
   socialLinks.spotify,
@@ -31,36 +34,40 @@ export function SiteFooter() {
           </h2>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li>
-              <Link
-                href="/#music"
+              <a
+                href="#music"
+                onClick={(e) => scrollToHash(e, "#music")}
                 className="text-(--color-fg-muted) hover:text-(--color-fg)"
               >
                 {t("nav.music")}
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                href="/#videos"
+              <a
+                href="#videos"
+                onClick={(e) => scrollToHash(e, "#videos")}
                 className="text-(--color-fg-muted) hover:text-(--color-fg)"
               >
                 {t("nav.videos")}
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                href="/#about"
+              <a
+                href="#about"
+                onClick={(e) => scrollToHash(e, "#about")}
                 className="text-(--color-fg-muted) hover:text-(--color-fg)"
               >
                 {t("nav.about")}
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                href="/#contact"
+              <a
+                href="#contact"
+                onClick={(e) => scrollToHash(e, "#contact")}
                 className="text-(--color-fg-muted) hover:text-(--color-fg)"
               >
                 {t("nav.contact")}
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>

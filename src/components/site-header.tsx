@@ -5,13 +5,14 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button } from "@/components/ui/button";
+import { scrollToHash } from "@/lib/scroll-to-hash";
 
 const navItems = [
   { href: "/", key: "home" },
-  { href: "/#music", key: "music" },
-  { href: "/#videos", key: "videos" },
-  { href: "/#about", key: "about" },
-  { href: "/#contact", key: "contact" },
+  { href: "#music", key: "music" },
+  { href: "#videos", key: "videos" },
+  { href: "#about", key: "about" },
+  { href: "#contact", key: "contact" },
 ] as const;
 
 export function SiteHeader() {
@@ -32,21 +33,33 @@ export function SiteHeader() {
           aria-label="Primary"
           className="hidden items-center gap-8 lg:flex"
         >
-          {navItems.map((item) => (
-            <Link
-              key={item.key}
-              href={item.href}
-              className="group relative py-1 text-sm font-medium text-(--color-fg-muted) transition-colors hover:text-(--color-fg)"
-            >
-              {t(item.key)}
-              <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-(--color-accent) transition-transform duration-300 ease-[var(--ease-editorial)] group-hover:scale-x-100" />
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.href.startsWith("#") ? (
+              <a
+                key={item.key}
+                href={item.href}
+                onClick={(e) => scrollToHash(e, item.href)}
+                className="group relative py-1 text-sm font-medium text-(--color-fg-muted) transition-colors hover:text-(--color-fg)"
+              >
+                {t(item.key)}
+                <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-(--color-accent) transition-transform duration-300 ease-[var(--ease-editorial)] group-hover:scale-x-100" />
+              </a>
+            ) : (
+              <Link
+                key={item.key}
+                href={item.href}
+                className="group relative py-1 text-sm font-medium text-(--color-fg-muted) transition-colors hover:text-(--color-fg)"
+              >
+                {t(item.key)}
+                <span className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-(--color-accent) transition-transform duration-300 ease-[var(--ease-editorial)] group-hover:scale-x-100" />
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
           <LanguageSwitcher />
-          <Button href="/#music" size="md">
+          <Button href="#music" size="md">
             {t("music")}
           </Button>
         </div>
@@ -104,14 +117,28 @@ export function SiteHeader() {
                 }`}
                 style={{ transitionDelay: open ? `${i * 0.04}s` : "0s" }}
               >
-                <Link
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  tabIndex={open ? undefined : -1}
-                  className="block py-3.5 text-base font-medium text-(--color-fg)"
-                >
-                  {t(item.key)}
-                </Link>
+                {item.href.startsWith("#") ? (
+                  <a
+                    href={item.href}
+                    onClick={(e) => {
+                      scrollToHash(e, item.href);
+                      setOpen(false);
+                    }}
+                    tabIndex={open ? undefined : -1}
+                    className="block py-3.5 text-base font-medium text-(--color-fg)"
+                  >
+                    {t(item.key)}
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    tabIndex={open ? undefined : -1}
+                    className="block py-3.5 text-base font-medium text-(--color-fg)"
+                  >
+                    {t(item.key)}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

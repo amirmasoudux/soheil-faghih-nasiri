@@ -1,9 +1,18 @@
 import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+import { localizedAlternates } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    title: "Privacy Policy",
+    alternates: localizedAlternates(locale, "/privacy"),
+  };
+}
 
 const content = {
   en: {

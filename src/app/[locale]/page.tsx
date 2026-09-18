@@ -1,4 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
+import type { Metadata } from "next";
 import { Hero } from "@/components/hero";
 import { HomeConcertSection } from "@/components/home-concert-section";
 import { HomeMusicSection } from "@/components/home-music-section";
@@ -7,6 +8,16 @@ import { DiscoverySection } from "@/components/discovery-section";
 import { HomeAboutSection } from "@/components/home-about-section";
 import { HomeContactSection } from "@/components/home-contact-section";
 import { artist, socialLinks } from "@/content/artist";
+import { localizedAlternates } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return { alternates: localizedAlternates(locale, "") };
+}
 
 export default async function HomePage({
   params,

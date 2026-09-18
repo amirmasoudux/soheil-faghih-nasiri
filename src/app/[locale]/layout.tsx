@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { siteUrl } from "@/lib/seo";
 import "../globals.css";
 
 const barlowCondensed = Barlow_Condensed({
@@ -40,7 +41,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://soheilfaghihnasiri.com";
 
   return {
     metadataBase: new URL(siteUrl),
@@ -49,13 +49,6 @@ export async function generateMetadata({
       template: `%s — Soheil Faghih Nasiri`,
     },
     description: t("description"),
-    alternates: {
-      canonical: locale === routing.defaultLocale ? "/" : `/${locale}`,
-      languages: {
-        en: "/en",
-        fr: "/fr",
-      },
-    },
     openGraph: {
       title: t("title"),
       description: t("description"),
